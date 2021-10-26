@@ -1,13 +1,3 @@
-###
-# @Description:
-# @Author: zhuoy
-# @Date: 2021-07-20 16:51:47
-# @LastEditors: zhuoy
-# @LastEditTime: 2021-10-21 12:06:31
-# @Calls:
-# @Called By:
-# @FilePath: \CDpan\bin\CDpan
-###
 #!/bin/sh
 
 if [ -h $0 ]; then
