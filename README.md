@@ -291,7 +291,7 @@ bowtie2-build      = /usr/bin/bowtie2-build
 ref = *.fasta
 ## The NCBI nucleotide non-redundant index, download from <https://genome-idx.s3.amazonaws.com/centrifuge/nt_2018_3_3.tar.gz>
 nt_index =
-## The file contained the NCBI taxid which you want to keep, just one colunm. We supply a example file contained all chordate taxid in the <https://github.com/kimi-du-bio/CDpan/examples/Liliopsida.taxid>.
+## The file contained the NCBI taxid which you want to keep, just one colunm. We supply a example file contained all liliopsida taxid in the <https://github.com/kimi-du-bio/CDpan/examples/Liliopsida.taxid>.
 taxid =
 
 # The parameter of pre-processing.
@@ -352,7 +352,7 @@ The txt file contains a file header guided by '##', which describes the format o
 
 ## Example file
 
-We also provide a example script and partial necessary file in the [examples](examples). To run the script, you need to install all tools required by CDpan and prepare the input file and the NCBI nucleotide non-redundant index file (download from <https://genome-idx.s3.amazonaws.com/centrifuge/nt_2018_3_3.tar.gz>). You may also need to adjust some parameters, such as paths of tools and file paths.
+We also provide a example script and partial necessary file in the [examples](examples). To run the script, you need to install all tools required by CDpan and prepare the input file and the NCBI nucleotide non-redundant index file (download from <https://genome-idx.s3.amazonaws.com/centrifuge/nt_2018_3_3.tar.gz>). You may also need to adjust some parameters, such as paths of tools and files.
 
 The input file used by this script is the example data of [EUPAN](https://github.com/doodlehzq/EUPAN) and you can get it from <https://cgm.sjtu.edu.cn/eupan/example_data/eupanExample.tar.gz>.
 
