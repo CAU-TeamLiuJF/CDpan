@@ -25,7 +25,7 @@ sub PrintExitMessage {
 
     print STDERR "$print_message\n";
     print STDERR "\n";
-    print STDERR "For more information, try \'CDpan --help\'\n";
+    print STDERR "For more information, try \'cdpan --help\'\n";
 
     exit(-1);
 }
