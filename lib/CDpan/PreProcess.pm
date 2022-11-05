@@ -58,7 +58,8 @@ sub __CheckTools__ {
                             bedtools
                             bowtie2
                             bowtie2-build
-                            minimap2 \;
+                            minimap2
+                            plink \;
 
     PrintMessage("Tools required: ");
     my $tools_count = 16;
@@ -262,7 +263,7 @@ sub __CheckFile__ {
 
     PrintStartMessage("Start checking files");
 
-    my @file_for_check = qw \ ref nt_index taxid \;
+    my @file_for_check = qw \ ref nt_index taxid genocontigs \;
     foreach my $file_for_check (@file_for_check) {
         unless ( defined $par->val('DATA', $file_for_check) ) {
             if ( $main::modules{"RUN-ALL"} or $main::modules{"RUN-DIEM"} ){
@@ -274,6 +275,8 @@ sub __CheckFile__ {
             }elsif ( $file_for_check eq 'nt_index' and  $main::modules{"mope"} ){
                 PrintErrorMessage("[DATA] => $file_for_check is required by Module $main::module");
             }elsif ( $file_for_check eq 'taxid' and  $main::modules{"mope"} ){
+                PrintErrorMessage("[DATA] => $file_for_check is required by Module $main::module");
+            }elsif ( $file_for_check eq 'genocontigs' and  $main::modules{"verify"} ){
                 PrintErrorMessage("[DATA] => $file_for_check is required by Module $main::module");
             }else{
                 next;

@@ -18,11 +18,11 @@ require Exporter;
 our @ISA = qw \ Exporter \;
 our @EXPORT = qw \ PrintExitMessage PrintWarnMessage PrintErrorMessage PrintStartMessage PrintEndMessage PrintProcessMessage PrintMessage PrintfMessage
                    PreProcess
-                   Filter Align Extract Assembly Mope Vot Soot Merge Location RunAll RunDiem\;
+                   Filter Align Extract Assembly Mope Vot Soot Merge Location Verify RunAll RunDiem\;
 our %EXPORT_TAGS = (
     ALL    => [ @EXPORT ],
     PRINT  => [ qw \ PrintExitMessage PrintWarnMessage PrintErrorMessage PrintStartMessage PrintEndMessage PrintProcessMessage PrintMessage PrintfMessage\ ],
-    MODULE => [ qw \ Filter Align Extract Assembly Mope Vot Soot Merge Location RunAll RunDiem\ ],
+    MODULE => [ qw \ Filter Align Extract Assembly Mope Vot Soot Merge Location Verify RunAll RunDiem\ ],
 );
 
 # module CDpan::Print
@@ -48,6 +48,7 @@ sub Vot      { return &CDpan::Master::Vot      };
 sub Soot     { return &CDpan::Master::Soot     };
 sub Merge    { return &CDpan::Master::Merge    };
 sub Location { return &CDpan::Master::Location };
+sub Verify   { return &CDpan::Master::Verify   };
 sub RunAll   { return &CDpan::Master::RunAll   };
 sub RunDiem  { return &CDpan::Master::RunDiem  };
 
