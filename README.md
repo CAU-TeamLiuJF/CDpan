@@ -1,8 +1,8 @@
-# CDpan: Constructing dispensable genome for pan-genome analysis
+# CDpan: Constructing new sequence for pan-genome analysis
 
 ## Introduction
 
-There is an increasing understanding that a reference sequence representing a genome of individual is insufficient to capture the genomic diversity we observe in nature. With the development of short-reads sequencing, it's convenient to achieve the high depth whole-genome sequencing data of an individual. Therefore, to help the researchers to capture the genomic sequences absent in the reference genome within the species, we propose the CDpan (Constructing dispensable genome for pan-genome analysis) to construct the dispensable genome using high-throughput sequencing reads.
+There is an increasing understanding that a reference sequence representing a genome of individual is insufficient to capture the genomic diversity we observe in nature. With the development of short-reads sequencing, it's convenient to achieve the high depth whole-genome sequencing data of an individual. Therefore, to help the researchers to capture the genomic sequences absent in the reference genome within the species, we propose the CDpan (Constructing new sequence for pan-genome analysis) to construct the new sequence using high-throughput sequencing reads.
 
 ## Installation
 
@@ -67,7 +67,7 @@ Run CDpan from the command line like this:
 
 The main input of the program is a directory which deposited the fastq(fastq.gz) file of the paired-end sequencing reads.
 
-The main output of the program is a fasta file containing the sequences of the constructed dispensable genome and the predicted inserted location of the new sequences relative to the reference genome.
+The main output of the program is a fasta file containing the sequences of the constructed new sequence and the predicted inserted location of the new sequences relative to the reference genome.
 
 To use CDpan, you need to specify a module and support the `input_dir`. Please refer to the [Usage](#usage) section to get the detailed information of the module contained in the CDpan. The introduction of `input_dir` please refer to the following [Usage](#usage) section.
 
@@ -101,7 +101,7 @@ The `config_file` is a variant of .ini-style config file and a config file examp
 
 #### output
 
-This program produces a fasta file containing the sequences of the constructed dispensable genome and the txt file for the predicted inserted location.
+This program produces a fasta file containing the sequences of the constructed new sequence and the txt file for the predicted inserted location.
 
 #### only sequences
 
@@ -235,13 +235,13 @@ cdpan soot -i input_dir -c config_file
 
 The input directory is the output directory of the "vot" process. This step is used to keep the absent sequences of the reference genome in the assembled results.
 
-#### Final dispensable genome
+#### Final new sequence
 
 ```bash
 cdpan merge -i input_dir -c config_file
 ```
 
-The input directory is the output directory of the "soot" process. This step is used to integrated the new DNA sequences of all individuals and construct the final dispensable genome. The output is a fasta file.
+The input directory is the output directory of the "soot" process. This step is used to integrated the new DNA sequences of all individuals and construct the final new sequence. The output is a fasta file.
 
 #### Location
 
@@ -346,7 +346,7 @@ species =
 
 ## Output file
 
-This program produces a fasta file containing the sequences of the constructed dispensable genome and the txt file for the predicted inserted location.
+This program produces a fasta file containing the sequences of the constructed new sequence and the txt file for the predicted inserted location.
 
 The txt file contains a file header guided by '##', which describes the format of this file. Followed by specific information of the predicted inserted location, one row per contig and one column per sample.
 
